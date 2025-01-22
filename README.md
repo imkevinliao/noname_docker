@@ -19,7 +19,7 @@ docker run -d -p 8089:8089 --name noname kevinstarry/noname
 docker run -d -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name noname kevinstarry/noname
 ```
 
-更新（如果 noname 更新了）：
+3. 更新（同步noname）：
 ```
 docker exec -it noname sh -c "cd /app/noname && git pull"
 ```
