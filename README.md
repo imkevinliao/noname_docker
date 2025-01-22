@@ -14,7 +14,7 @@ curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 docker run -d -p 8089:8089 --name noname kevinstarry/noname
 ```
 
-只允许某些 ip，或 ip 段：（请勿直接使用该命令，自行替换允许的 ip，ip段）
+只允许某些 ip，或 ip 段：（请勿直接使用该命令，自行替换允许的 ip，ip段，以英文逗号作为分隔）
 ```
 docker run -d -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name noname kevinstarry/noname
 ```
