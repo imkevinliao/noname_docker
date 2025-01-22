@@ -23,6 +23,10 @@ docker run -d -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name no
 ```
 docker exec -it noname sh -c "cd /app/noname && git pull"
 ```
+4. 移除(一键三连）
+```
+docker stop noname && docker rm noname && docker rmi noname 
+```
 
 # 说明
 noname 的 Dockerfile 时候并不符合我的预期，所以自制。
