@@ -1,5 +1,13 @@
 # noname_docker
-使用方式：
+部署：
+
+1. 部署 docker （已部署则忽略）
+
+```
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+```
+
+2. 启动容器
 
 不限制任何ip，所有人都可以访问：
 ```
@@ -26,5 +34,6 @@ noname 的 Dockerfile 时候并不符合我的预期，所以自制。
 服务器应该快要到期了，如果失效，请自行部署体验： http://38.147.170.202:8000/
 
 三国杀，再玩十年也不腻。
+
 
 
