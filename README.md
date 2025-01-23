@@ -19,10 +19,14 @@ docker run -d -p 8089:8089 --name noname kevinstarry/noname
 docker run -d -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name noname kevinstarry/noname
 ```
 
-3. 更新（同步noname）：
+3. 更新：
+
+已经内置了每日凌晨三点（UTC时间）更新定时任务
+
 ```
 docker exec -it noname sh -c "cd /app/noname && git pull"
 ```
+
 4. 移除(一键三连）
 ```
 docker stop noname && docker rm noname && docker rmi noname 
