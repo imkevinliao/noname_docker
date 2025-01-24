@@ -20,7 +20,7 @@ docker run -d -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name no
 ```
 
 3. 更新：
-已经内置了 UTC 时间每日凌晨三点更新定时任务，当然也可以选择手动更新：
+已经内置每日凌晨三点更新，通常无需手动更新：
 ```
 docker exec -it noname sh -c "cd /app/noname && git pull"
 ```
