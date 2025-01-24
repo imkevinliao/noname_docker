@@ -24,6 +24,29 @@ docker exec -it noname sh -c "cd /app/noname && git pull"
 ```
 docker stop noname && docker rm noname && docker rmi noname 
 ```
+
+# 参数说明
+新版本更新了一些控制参数：
+
+ALLOWED_IPS:原来就有的参数
+
+DISABLE_UPDATE:是否禁止定时更新，配置任意值都将禁止更新，不配置则默认开启定时更新任务
+
+UPDATE_RIGHT_AWAY:是否立即更新，配置任意值都将在容器首次启动时候，立即更新一次
+
+举例：不限制任何IP，禁止开启定时更新任务，首次启动时更新。（注，当参数无需配置时候可以不填，这里这是为了展示所有参数）
+```
+docker run -d -p 8089:8089 \
+    -e ALLOWED_IPS="" \
+    -e DISABLE_UPDATE="TRUE" \
+    -e UPDATE_RIGHT_AWAY="TRUE" \
+    --name noname kevinstarry/noname
+```
+
+举例：不限制任何IP，启用定时更新，首次启动容器不立即更新
+```
+docker run -d -p 8089:8089 --name noname kevinstarry/noname
+```
 # 说明
 noname 的 Dockerfile 镜像太大 而且 无法限制ip
 
