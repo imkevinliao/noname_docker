@@ -28,7 +28,7 @@ docker stop noname && docker rm noname && docker rmi noname
 # 进阶（参数配置）
 新版本更新了一些控制参数：
 
-ALLOWED_IPS:原来就有的参数（默认 本机/容器 允许访问,允许的ip只需要配置公网ip即可）
+ALLOWED_IPS:原来就有的参数（默认 本机/容器 允许访问 不必额添加, 允许的ip只需要配置公网ip即可）
 
 DISABLE_UPDATE:是否禁止定时更新，配置任意值都将禁止更新，不配置则默认开启定时更新任务
 
