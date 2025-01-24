@@ -35,8 +35,9 @@ docker stop noname && docker rm noname && docker rmi noname
 
 noname 的 Dockerfile 1.镜像太大 2.无法限制ip
 
-如果服务器到期失效，请自行部署体验。
+如果服务器（野草云HK）到期失效，请自行部署体验
 
+# 祝福杀友
 三国杀，再玩十年也不腻。
 
 
