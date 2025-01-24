@@ -1,5 +1,5 @@
 # noname_docker
-部署：
+# 快速部署
 1. 部署 docker （已部署则忽略）
 ```
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
@@ -25,7 +25,7 @@ docker exec -it noname sh -c "cd /app/noname && git pull"
 docker stop noname && docker rm noname && docker rmi noname 
 ```
 
-# 参数说明
+# 进阶（参数配置）
 新版本更新了一些控制参数：
 
 ALLOWED_IPS:原来就有的参数
