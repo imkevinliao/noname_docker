@@ -47,7 +47,7 @@ docker run -d -p 8089:8089 \
 ```
 docker run -d -p 8089:8089 --name noname kevinstarry/noname
 ```
-# 说明
+# 说明&体验
 noname 的 Dockerfile 镜像太大，而且无法限制ip 自制镜像只比原仓库大一点，一键部署完就可以直接上手玩了，免折腾。
 
 服务器1（野草云香港）快到期（随意刷流量 反正要到期了）: http://38.147.170.202:8089/
