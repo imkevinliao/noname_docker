@@ -14,7 +14,10 @@ docker run -d -p 8089:8089 --name noname kevinstarry/noname
 docker run -d -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name noname kevinstarry/noname
 ```
 3. 访问
-你部署服务器的公网 IP 地址 + 端口 http://ip:8089 如果是本地则是：http://localhost:8089 或者 http://127.0.0.1:8089
+
+服务器的公网 IP 地址 + 端口 http://ip:8089
+
+如果是本地则是：http://127.0.0.1:8089
 4. 更新：
 已经内置每日凌晨三点更新，通常无需手动更新：
 ```
