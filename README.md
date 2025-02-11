@@ -34,7 +34,7 @@ DISABLE_UPDATE:是否禁止定时更新，配置任意值都将禁止更新，�
 
 UPDATE_RIGHT_AWAY:是否立即更新，配置任意值都将在容器首次启动时候，立即更新一次
 
-举例：不限制任何IP，禁止开启定时更新任务，首次启动时更新。（注，当参数无需配置时候可以不填，这里这是为了展示所有参数）
+举例：不限制任何IP，禁止开启定时更新任务，首次启动时更新。（注，当参数无需配置时候可以不填，这里这是为了展示参数）
 ```
 docker run -d -p 8089:8089 \
     --restart=always \
@@ -46,7 +46,7 @@ docker run -d -p 8089:8089 \
 
 举例：不限制任何IP，启用定时更新，首次启动容器不立即更新
 ```
-docker run -d -p 8089:8089 --name noname kevinstarry/noname
+docker run -d --restart=always -p 8089:8089 --name noname kevinstarry/noname
 ```
 # 说明&体验
 noname 的 Dockerfile 镜像太大，而且无法限制ip 自制镜像只比原仓库大一点，一键部署完就可以直接上手玩了，免折腾。
