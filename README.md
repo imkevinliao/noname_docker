@@ -7,11 +7,11 @@ curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 2. 启动容器
 不限制ip，所有人都可以访问：
 ```
-docker run -d -p 8089:8089 --name noname kevinstarry/noname
+docker run -d --restart=always -p 8089:8089 --name noname kevinstarry/noname
 ```
 只允许某些 ip，或 ip 段：（请自行替换允许的 ip，ip段，以英文逗号作为分隔）
 ```
-docker run -d -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name noname kevinstarry/noname
+docker run -d --restart=always -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name noname kevinstarry/noname
 ```
 3. 访问：服务器的公网 IP 地址 + 端口 http://ip:8089 如果是本地则是：http://127.0.0.1:8089
 
@@ -37,6 +37,7 @@ UPDATE_RIGHT_AWAY:是否立即更新，配置任意值都将在容器首次启�
 举例：不限制任何IP，禁止开启定时更新任务，首次启动时更新。（注，当参数无需配置时候可以不填，这里这是为了展示所有参数）
 ```
 docker run -d -p 8089:8089 \
+    --restart=always \
     -e ALLOWED_IPS="" \
     -e DISABLE_UPDATE="TRUE" \
     -e UPDATE_RIGHT_AWAY="TRUE" \
