@@ -45,6 +45,11 @@ docker run -d -p 8089:8089 \
 ```
 docker run -d --restart=always -p 8089:8089 --name noname kevinstarry/noname
 ```
+
+举例3：确保可用策略 手动更新 docker exec -it noname sh -c "cd /app/noname && git pull"
+```
+docker run -d --restart=always -p 8089:8089 -e DISABLE_UPDATE="TRUE" --name noname kevinstarry/noname
+```
 # 祝福杀友
 此版本特点：完全单机，可以设置访问白名单，镜像仅略大于 noname 仓库大小，自动更新（省心）。
 
