@@ -52,12 +52,6 @@ docker run -d --restart=always -p 8089:8089 --name noname kevinstarry/noname
 docker run -d --restart=always -p 8089:8089 -e DISABLE_UPDATE="TRUE" --name noname kevinstarry/noname
 ```
 # 祝福杀友
-此版本特点：完全单机，可以设置访问白名单，镜像仅略大于 noname 仓库大小，自动更新（省心）。
-
-纯公益 腾讯轻量云新加坡服务器（请勿恶意刷流量）：http://tencent.25527123.xyz:12004/
+苟卡无道 今日起兵 三国杀 再玩十年也不腻
 
 注意保存游戏配置文件，这样随时可以导入游戏配置。（选项->选项->其他->导出游戏配置）
-
-苟卡无道，今日起兵
-
-三国杀 再玩十年也不腻
