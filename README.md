@@ -1,6 +1,7 @@
 # 无名杀 Docker 版
-个人精力实在是有限，Dockerfile 留给大家借鉴了，实在是杀不动了。
+无名杀：https://github.com/libnoname/noname
 
+个人精力实在是有限，Dockerfile 留给大家借鉴了，实在是杀不动了。
 # 部署
 准备Docker
 ```
