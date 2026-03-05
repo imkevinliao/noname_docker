@@ -36,7 +36,9 @@ jobs:
           context: .
           file: ./apps/core/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: |
             kevinstarry/noname:latest
             kevinstarry/noname:${{ steps.date.outputs.today }}
+          build-args: |
+            NODE_OPTIONS=--max-old-space-size=4096
