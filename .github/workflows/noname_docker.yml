@@ -15,7 +15,10 @@ jobs:
         with:
           repository: libnoname/noname
           ref: main
-
+      - name: Modify Dockerfile Command
+        run: |
+          sed -i 's/pnpm build:full/pnpm build/g' ./apps/core/Dockerfile
+          echo "已将 Dockerfile 中的 build:full 替换为 build"
       - name: Get current date
         id: date
         run: |
