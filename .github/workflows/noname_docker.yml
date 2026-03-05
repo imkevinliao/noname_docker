@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Docker
     steps:
       - name: copy_from_noname
         uses: actions/checkout@v4
