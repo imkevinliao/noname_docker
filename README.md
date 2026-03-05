@@ -16,40 +16,9 @@ docker run -d --restart=always -p 8089:8089 --name noname kevinstarry/noname
 ```
 docker run -d --restart=always -p 8089:8089 -e ALLOWED_IPS="192.168.1.1,192.168.0.0/16" --name noname kevinstarry/noname
 ```
-3. 手动更新（已经内置每日凌晨三点更新）：
-```
-docker exec -it noname sh -c "cd /app/noname && git pull"
-```
-4. 完全移除(一键三连）
+3. 完全移除(一键三连）
 ```
 docker stop noname && docker rm noname && docker rmi noname 
-```
-
-# 进阶（参数配置）
-ALLOWED_IPS: 默认 本机/容器 允许访问 不必额添加, 允许的ip只需要配置公网ip即可
-
-DISABLE_UPDATE:是否禁止定时更新，配置任意值都将禁止更新，不配置则默认开启定时更新任务
-
-UPDATE_RIGHT_AWAY:是否立即更新，配置任意值都将在容器首次启动时候，立即更新一次
-
-举例1：不限制任何IP，禁止定时更新，首次启动容器时立即更新。
-```
-docker run -d -p 8089:8089 \
-    --restart=always \
-    -e ALLOWED_IPS="" \
-    -e DISABLE_UPDATE="TRUE" \
-    -e UPDATE_RIGHT_AWAY="TRUE" \
-    --name noname kevinstarry/noname
-```
-
-举例2：不限制任何IP，启用定时更新，首次启动容器时不更新
-```
-docker run -d --restart=always -p 8089:8089 --name noname kevinstarry/noname
-```
-
-举例3：确保可用策略 手动更新 docker exec -it noname sh -c "cd /app/noname && git pull"
-```
-docker run -d --restart=always -p 8089:8089 -e DISABLE_UPDATE="TRUE" --name noname kevinstarry/noname
 ```
 # 祝福杀友
 苟卡无道 今日起兵 三国杀 再玩十年也不腻
